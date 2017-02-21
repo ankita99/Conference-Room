@@ -1,0 +1,18 @@
+.clickable{
+    cursor: pointer;   
+}
+
+.panel-heading span {
+	margin-top: -20px;
+	font-size: 15px;
+}
+.panel-body input[type="checkbox"] {
+	margin-right: 5px;
+}
+
+.sortorder:after {
+  content: '\25b2';
+}
+.sortorder.reverse:after {
+  content: '\25bc';
+}

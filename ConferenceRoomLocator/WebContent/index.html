@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html ng-app="conferenceApp">
+<head>
+	<meta charset="ISO-8859-1">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Conference Room Locator</title>
+	
+	<!-- Stylesheets -->
+	<link type="text/css" href="css/bootstrap.css" rel="stylesheet" />
+	<link type="text/css" href="css/angular-multi-select.css" rel="stylesheet" />
+	<link type="text/css" href="css/select.css" rel="stylesheet" />
+	<link type="text/css" href="css/timeline.css" rel="stylesheet" />
+	<link type="text/css" href="css/angular-busy.min.css" rel="stylesheet" />
+	<link type="text/css" href="css/main.css" rel="stylesheet" />
+	<link type="text/css" href="css/template.css" rel="stylesheet" />
+	<link type="text/css" href="css/play.css" rel="stylesheet" />
+    <link rel="stylesheet" href="css/style.css"/>
+	
+   
+	<!-- External Libraries -->
+	<script type="application/javascript" src="js/lib/jquery.min.js"></script>
+    <script type="application/javascript" src="js/lib/jquery-ui.min.js"></script>
+	<script type="application/javascript" src="js/lib/angular.js"></script>
+	<script type="application/javascript" src="js/lib/angular-ui-router.js"></script>
+	<script type="application/javascript" src="js/lib/angular-resource.js"></script>
+	<script type="application/javascript" src="js/lib/angular-sanitize.js"></script>
+	<script type="application/javascript" src="js/lib/ui-bootstrap-tpls.js"></script>
+    
+	<script type="application/javascript" src="js/lib/select.js"></script>
+	<script type="application/javascript" src="js/lib/angular-multi-select.js"></script>
+	<script type="text/javascript" src="js/lib/angular-touch.js"></script>
+	<script type="application/javascript" src="js/lib/angular-dragdrop.min.js"></script>
+	<script type="application/javascript" src="js/lib/angular-file-upload.min.js"></script>
+	<script type="application/javascript" src="js/lib/console-sham.js"></script>
+	<script type="application/javascript" src="js/lib/es5-shim.js"></script>
+    <script type="application/javascript" src="js/lib/es5-sham.js"></script>
+    <script type="application/javascript" src="js/lib/angular-busy.min.js"></script>
+    <script type="application/javascript" src="js/lib/checklist-model.js"></script>
+    <script type="application/javascript" src="js/lib/color-picker.js"></script>
+    <script type="application/javascript" src="js/app.js"></script>
+
+  <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.0/css/font-awesome.css" />
+
+
+  <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.25/angular.min.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.25/angular-route.js"></script>
+ </head>
+<!-- define angular controller -->
+<body ng-controller="mainController">
+
+  <nav class="navbar navbar-default">
+    <div class="container">
+      <div class="navbar-header">
+        <a class="navbar-brand" href="/">Conference Room Locator</a>
+      </div>
+
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#"><i class="fa fa-home"></i> Book</a></li>
+        <li><a href="#cancel"><i class="fa fa-shield"></i> Cancel</a></li>
+        <li><a href="#adhoc"><i class="fa fa-comment"></i> Adhoc</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <div id="main">
+  
+    <!-- angular templating -->
+		<!-- this is where content will be injected -->
+    <div ng-view></div>
+    
+  </div>
+  
+</body>
+</html>
