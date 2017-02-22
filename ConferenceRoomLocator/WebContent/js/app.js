@@ -1,8 +1,14 @@
 	// create the module and name it scotchApp
-	var conferenceApp = angular.module('conferenceApp', ['ngRoute']);
+	var conferenceApp = angular.module('conferenceApp', ['ngRoute', 'ngMaterial']);
 
 	// configure our routes
-	conferenceApp.config(function($routeProvider) {
+	conferenceApp.config(function($routeProvider, $mdThemingProvider) {
+		
+		//create application theme
+		$mdThemingProvider.theme('orange')
+		.accentPalette('orange')
+		.backgroundPalette('blue');
+		
 		$routeProvider
 
 			// route for the home page
@@ -23,7 +29,7 @@
 				controller  : 'adhocController'
 			});
 	});
-
+	
 	// create the controller and inject Angular's $scope
 	conferenceApp.controller('mainController', function($scope) {
 		// create a message to display in our view

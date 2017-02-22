@@ -7,29 +7,26 @@
 	
 	<!-- Stylesheets -->
 	
-	<!-- Angular Material style sheet -->
-	<link type="text/css" href="css/angular-material.min.css" rel="stylesheet" />
+	
 	
 	<link type="text/css" href="css/bootstrap.css" rel="stylesheet" />
 	<link type="text/css" href="css/angular-multi-select.css" rel="stylesheet" />
 	<link type="text/css" href="css/select.css" rel="stylesheet" />
 	<link type="text/css" href="css/timeline.css" rel="stylesheet" />
 	<link type="text/css" href="css/angular-busy.min.css" rel="stylesheet" />
+	
+	<!-- Angular Material style sheet -->
+	<link type="text/css" href="css/angular-material.min.css" rel="stylesheet" />
+	
 	<link type="text/css" href="css/main.css" rel="stylesheet" />
 	<link type="text/css" href="css/template.css" rel="stylesheet" />
 	<link type="text/css" href="css/play.css" rel="stylesheet" />
     <link rel="stylesheet" href="css/style.css"/>
+    <link rel="stylesheet" href="css/appCSS/index.css"/>
+    <link rel="stylesheet" href="css/appCSS/bookRoom.css"/>
 	
    
 	<!-- External Libraries -->
-	
-	<!-- Angular Material requires Angular.js Libraries -->
-	<script type="application/javascript" src="js/lib/angular-aria.min.js"></script>
-	<script type="application/javascript" src="js/lib/angular-messages.min.js"></script>
-	
-	<!-- Angular Material Library -->
-	<script type="application/javascript" src="js/lib/angular-material.min.js"></script>
-	
 	<script type="application/javascript" src="js/lib/jquery.min.js"></script>
     <script type="application/javascript" src="js/lib/jquery-ui.min.js"></script>
 	<script type="application/javascript" src="js/lib/angular.js"></script>
@@ -58,10 +55,20 @@
   <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.25/angular.min.js"></script>
   <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.25/angular-route.js"></script>
  </head>
+ 
+ <!-- Angular Material requires Angular.js Libraries -->
+	<script type="application/javascript" src="js/lib/angular-animate.min.js"></script>
+	<script type="application/javascript" src="js/lib/angular-aria.min.js"></script>
+	<script type="application/javascript" src="js/lib/angular-messages.min.js"></script>
+	
+	<!-- Angular Material Library -->
+	<script type="application/javascript" src="js/lib/angular-material.min.js"></script>
+	
 <!-- define angular controller -->
 <body ng-controller="mainController">
 
-  <nav class="navbar navbar-default">
+ <!-- 
+ <nav class="navbar navbar-default">
     <div class="container">
       <div class="navbar-header">
         <a class="navbar-brand" href="/">Conference Room Locator</a>
@@ -74,6 +81,25 @@
       </ul>
     </div>
   </nav>
+  --> 
+  
+  <md-toolbar class="md-primary">
+      <div class="md-toolbar-tools">
+      
+		<img class="logo" src="images/Persistent_logo.png">
+		
+        <md-truncate>Conference Room Locator</md-truncate>
+
+        <span flex=""></span>
+        <md-button class="md-raised" aria-label="Learn More">
+          Learn More
+        </md-button>
+        <md-button class="md-fab md-mini" aria-label="Favorite">
+          <md-icon md-svg-icon="images/Persistent_logo.png"></md-icon>
+        </md-button>
+        
+      </div>
+    </md-toolbar>
 
   <div id="main">
   
