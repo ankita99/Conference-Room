@@ -21,7 +21,10 @@
 				templateUrl : 'js/partials/book.html',
 				controller  : 'bookController'
 			})
-
+			.when('/book', {
+				templateUrl : 'js/partials/book.html',
+				controller  : 'bookController'
+			})
 			// route for the about page
 			.when('/cancel', {
 				templateUrl : 'js/partials/cancel.html',

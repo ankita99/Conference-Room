@@ -103,31 +103,18 @@
     </md-toolbar>
     
     <md-content>
-    <md-tabs md-dynamic-height="" md-border-bottom="">
-      <md-tab label="Book Meeting" >
-        <md-content class="md-padding" ng-controller="bookController">
-			  <div ng-view></div>
-        </md-content>
+    <md-tabs md-dynamic-height="" md-border-bottom="" md-stretch-tabs >
+      <md-tab ><a href="#/book">Book</a>
       </md-tab>
-      <md-tab label="Adhoc">
-        <md-content class="md-padding" ng-controller="adhocController">
-          <div ng-view></div>
-        </md-content>
+      <md-tab ><a href="#/adhoc">Adhoc</a>
       </md-tab>
-      <md-tab label="Cancel Booking">
-        <md-content class="md-padding" ng-controller="cancelController">
-          <div ng-view></div>
-        </md-content>
+      <md-tab ><a href="#/cancel">Cancel</a>
       </md-tab>
     </md-tabs>
+    <div id="content" ng-view flex> </div>
   </md-content>
 
-  <div id="main">
-  
-    <!-- angular templating -->
-		<!-- this is where content will be injected -->
-    <div ng-view></div>
-    
+  <div id="main"> 
   </div>
   	<script type="application/javascript" src="js/controllers/mainctrl.js"></script>
   	<script type="application/javascript" src="js/controllers/adhocCntrl.js"></script>
