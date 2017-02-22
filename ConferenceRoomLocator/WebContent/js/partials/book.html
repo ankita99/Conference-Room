@@ -1,23 +1,24 @@
-<div class="jumbotron text-center">
-	<h1>Booking Page</h1>
-	
-	<p>{{ message }}</p>
-</div>
 
-<md-card md-theme="blue">
-		        <md-card-title>
-		          <md-card-title-text>
-					<div layout="column" layout-align="center center">
-						<div>
+<md-card md-colors="::{backgroundColor: 'default-primary-50'}">
+     <md-card-title>
+       <md-card-title-text>
+			<div layout="column" layout-align="center center">
+				<md-card md-colors="::{backgroundColor: 'default-primary-600'}">
+			        <md-card-title>
+			          <md-card-title-text>
+			            <div>
 							<span class="md-headline"><h1 class="md-display-2">Book Meeting</h1></span>
-		            		<span class="md-subhead">Information regarding the available rooms</span>
+			         		<span class="md-subhead">Information regarding the available rooms</span>
 							<h4>Opening the calendar </h4>
 							<md-datepicker ng-model="ctrl.myDate" md-placeholder="Enter date" md-open-on-focus=""></md-datepicker>
 						</div>
-					</div>
-		          </md-card-title-text>
-		        </md-card-title>
-		        <md-card-actions layout="row" layout-align="center center">
-		          <md-button>Get Rooms</md-button>
-		        </md-card-actions>
-		      </md-card>
+			          </md-card-title-text>
+			        </md-card-title>
+			        <md-card-actions layout="row" layout-align="end center">
+			          <md-button>Get Rooms</md-button>
+			        </md-card-actions>
+			     </md-card>
+			</div>
+       </md-card-title-text>
+     </md-card-title>
+</md-card>
