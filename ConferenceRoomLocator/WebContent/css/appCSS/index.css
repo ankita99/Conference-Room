@@ -1,0 +1,11 @@
+.md-truncate{
+	position: absolute; 
+	left: 90px; 
+	right: 170px; 
+	top: 13px; 
+	bottom: 13px;
+}
+
+.logo{
+	width: 70px;
+}

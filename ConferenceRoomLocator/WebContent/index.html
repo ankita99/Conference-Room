@@ -7,29 +7,26 @@
 	
 	<!-- Stylesheets -->
 	
-	<!-- Angular Material style sheet -->
-	<link type="text/css" href="css/angular-material.min.css" rel="stylesheet" />
+	
 	
 	<link type="text/css" href="css/bootstrap.css" rel="stylesheet" />
 	<link type="text/css" href="css/angular-multi-select.css" rel="stylesheet" />
 	<link type="text/css" href="css/select.css" rel="stylesheet" />
 	<link type="text/css" href="css/timeline.css" rel="stylesheet" />
 	<link type="text/css" href="css/angular-busy.min.css" rel="stylesheet" />
+	
+	<!-- Angular Material style sheet -->
+	<link type="text/css" href="css/angular-material.min.css" rel="stylesheet" />
+	
 	<link type="text/css" href="css/main.css" rel="stylesheet" />
 	<link type="text/css" href="css/template.css" rel="stylesheet" />
 	<link type="text/css" href="css/play.css" rel="stylesheet" />
     <link rel="stylesheet" href="css/style.css"/>
+    <link rel="stylesheet" href="css/appCSS/index.css"/>
+    <link rel="stylesheet" href="css/appCSS/bookRoom.css"/>
 	
    
 	<!-- External Libraries -->
-	
-	<!-- Angular Material requires Angular.js Libraries -->
-	<script type="application/javascript" src="js/lib/angular-aria.min.js"></script>
-	<script type="application/javascript" src="js/lib/angular-messages.min.js"></script>
-	
-	<!-- Angular Material Library -->
-	<script type="application/javascript" src="js/lib/angular-material.min.js"></script>
-	
 	<script type="application/javascript" src="js/lib/jquery.min.js"></script>
     <script type="application/javascript" src="js/lib/jquery-ui.min.js"></script>
 	<script type="application/javascript" src="js/lib/angular.js"></script>
@@ -50,6 +47,7 @@
     <script type="application/javascript" src="js/lib/checklist-model.js"></script>
     <script type="application/javascript" src="js/lib/color-picker.js"></script>
     <script type="application/javascript" src="js/app.js"></script>
+    <script type="application/javascript" src="js/controllers/maincntrl.js"></script>
 
   <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" />
   <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.0/css/font-awesome.css" />
@@ -58,10 +56,20 @@
   <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.25/angular.min.js"></script>
   <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.25/angular-route.js"></script>
  </head>
+ 
+ <!-- Angular Material requires Angular.js Libraries -->
+	<script type="application/javascript" src="js/lib/angular-animate.min.js"></script>
+	<script type="application/javascript" src="js/lib/angular-aria.min.js"></script>
+	<script type="application/javascript" src="js/lib/angular-messages.min.js"></script>
+	
+	<!-- Angular Material Library -->
+	<script type="application/javascript" src="js/lib/angular-material.min.js"></script>
+	
 <!-- define angular controller -->
 <body ng-controller="mainController">
 
-  <nav class="navbar navbar-default">
+ <!-- 
+ <nav class="navbar navbar-default">
     <div class="container">
       <div class="navbar-header">
         <a class="navbar-brand" href="/">Conference Room Locator</a>
@@ -74,6 +82,47 @@
       </ul>
     </div>
   </nav>
+  --> 
+  
+  <md-toolbar class="hue-1">
+      <div class="md-toolbar-tools">
+      
+		<img class="logo" src="images/Persistent_logo.png">
+		
+        <md-truncate>Conference Room Locator</md-truncate>
+
+        <span flex=""></span>
+        <md-button class="md-raised" aria-label="Learn More">
+          Learn More
+        </md-button>
+        <md-button class="md-fab md-mini" aria-label="Favorite">
+          <md-icon md-svg-icon="images/Persistent_logo.png"></md-icon>
+        </md-button>
+        
+      </div>
+    </md-toolbar>
+    
+    <md-content>
+    <md-tabs md-dynamic-height="" md-border-bottom="">
+      <md-tab label="Book Meeting">
+        <md-content class="md-padding" ng-controller="bookController">
+			  <div ng-view></div>
+        </md-content>
+      </md-tab>
+      <md-tab label="Adhoc">
+        <md-content class="md-padding">
+          <h1 class="md-display-2">Adhoc</h1>
+          <p>Information regarding the partially available rooms. </p>
+        </md-content>
+      </md-tab>
+      <md-tab label="Cancel Booking">
+        <md-content class="md-padding">
+          <h1 class="md-display-2">Cancel Booking</h1>
+          <p>Information regarding meeting cancellation</p>
+        </md-content>
+      </md-tab>
+    </md-tabs>
+  </md-content>
 
   <div id="main">
   
