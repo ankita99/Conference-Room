@@ -1,32 +1,23 @@
-<!-- <div class="jumbotron text-center">
+<div class="jumbotron text-center">
 	<h1>Booking Page</h1>
 	
 	<p>{{ message }}</p>z
-</div> -->
-
-<div ng-cloak="" class="tabsdemoDynamicHeight" ng-app="MyApp">
-  <md-content>
-    <md-tabs md-dynamic-height="" md-border-bottom="">
-      <md-tab label="Book Meeting">
-        <md-content class="md-padding">
-        	<div layout="row" layout-align="center center">
-          		<h1 class="md-display-2">Book Meeting</h1><br/>
-          		<p>Information regarding the available rooms.</p>
-          </div>
-        </md-content>
-      </md-tab>
-      <md-tab label="Adhoc">
-        <md-content class="md-padding">
-          <h1 class="md-display-2">Adhoc</h1>
-          <p>Information regarding the partially available rooms. </p>
-        </md-content>
-      </md-tab>
-      <md-tab label="Cancel Booking">
-        <md-content class="md-padding">
-          <h1 class="md-display-2">Cancel Booking</h1>
-          <p>Information regarding meeting cancellation</p>
-        </md-content>
-      </md-tab>
-    </md-tabs>
-  </md-content>
 </div>
+
+<md-card md-theme="blue">
+		        <md-card-title>
+		          <md-card-title-text>
+					<div layout="column" layout-align="center center">
+						<div>
+							<span class="md-headline"><h1 class="md-display-2">Book Meeting</h1></span>
+		            		<span class="md-subhead">Information regarding the available rooms</span>
+							<h4>Opening the calendar </h4>
+							<md-datepicker ng-model="ctrl.myDate" md-placeholder="Enter date" md-open-on-focus=""></md-datepicker>
+						</div>
+					</div>
+		          </md-card-title-text>
+		        </md-card-title>
+		        <md-card-actions layout="row" layout-align="center center">
+		          <md-button>Get Rooms</md-button>
+		        </md-card-actions>
+		      </md-card>
