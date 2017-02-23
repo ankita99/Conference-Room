@@ -7,7 +7,31 @@
       background: white; }
   .tabsdemoDynamicHeight md-content h1:first-child {
     margin-top: 0; }
+    
+.md-title{
+	padding-left: 20px;
+}
 
+.meetingForm{
+	padding-left: 20px;
+}
+
+.startTimeInput{
+	width: 80px;
+}
+
+.endTimeInput{
+	width: 80px;
+	margin-left: 10px;
+}
+
+.dateRow{
+	height: 80px;	
+}
+
+.timeRow{
+	height: 100px;
+}
 
 /*
 Copyright 2016 Google Inc. All Rights Reserved. 

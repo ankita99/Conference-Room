@@ -1,35 +1,25 @@
-conferenceApp.controller('bookController', ['$scope', function($scope) {
+conferenceApp.controller('bookController', ['$scope', '$mdpTimePicker', function($scope, $mdpTimePicker) {
 	$scope.message = 'Everyone come and book a room';
   this.myDate = new Date();
   this.isOpen = false;
   
   $scope.mytime = new Date();
+  
+  console.log($scope.startTime);
 
-  $scope.hstep = 1;
-  $scope.mstep = 15;
-
-  $scope.options = {
-    hstep: [1, 2, 3],
-    mstep: [1, 5, 10, 15, 25, 30]
+  this.showTimePicker = function(ev) {
+  	$mdpTimePicker($scope.currentTime, {
+      targetEvent: ev
+    }).then(function(selectedDate) {
+      $scope.currentTime = selectedDate;
+      console.log($scope.currentTime);
+    });
   };
-
-  $scope.ismeridian = true;
-  $scope.toggleMode = function() {
-    $scope.ismeridian = ! $scope.ismeridian;
+  
+  $scope.getRooms = function(){
+	  console.log($scope.meetingDate);
+	  console.log($scope.startTime);
+	  console.log($scope.endTime);
   };
-
-  $scope.update = function() {
-    var d = new Date();
-    d.setHours( 14 );
-    d.setMinutes( 0 );
-    $scope.mytime = d;
-  };
-
-  $scope.changed = function () {
-    console.log('Time changed to: ' + $scope.mytime);
-  };
-
-  $scope.clear = function() {
-    $scope.mytime = null;
-  };
+  
 }]);

@@ -1,47 +1,54 @@
 
-<md-card md-colors="::{backgroundColor: 'default-accent-100'}">
+<md-card class="appCard"md-colors="::{backgroundColor: 'default-primary-50'}">
      <md-card-title>
        <md-card-title-text>
-			<div layout="column" layout-align="layout-align-lg">
-				<md-card>
+			<div layout="column"" layout-align="center center">
+				<md-card class="appCard">
+					<md-card-header-text md-colors="::{backgroundColor: 'default-primary-700'}">
+					     <h3 class="md-title">Book metting</h3>
+					</md-card-header-text>
 			        <md-card-title>
-			          <md-card-title-text layout-align="center center">
-						      <form name="userForm">
-						      	<div layout-gt-sm="row">
-						      		<div layout-gt-sm="column">
-						      			<h3>Select date for your meeting:</h5>
+			          <md-card-title-text>
+						      <form class="meetingForm appCard" name="userForm">
+						      	<div class="dateRow" layout-gt-xs="row">
+						      		<div layout-gt-xs="column">
+						      			<h3>Date:</h3>
 						      		</div>
-						      		<div layout-gt-sm="column">
+						      		<div layout-gt-xs="column">
 						      			<md-input-container>
 						            		<label>Date</label>
-						            		<md-datepicker ng-model="user.submissionDate"></md-datepicker>
+						            		<md-datepicker ng-model="meetingDate"></md-datepicker>
 						          		</md-input-container>
 						      		</div>
 						      	</div>
-						      	<div layout-gt-sm="row">
+						      	<div class="timeRow" layout-gt-sm="row">
 						      		<div layout-gt-sm="column">
-						      			Start time:
         								<div>
-							              <h4 class="md-subhead">Standard time picker</h4>
-							              <mdp-time-picker ng-model="currentDate"></mdp-time-picker>
+							              <h3>From:</h3>
+							              <input type="text" class="startTimeInput" ng-model="startTime" name="start_time" class="timepicker" placeholder="h:mm PM" data-default-time="false">
+							              
 							            </div>
 						      		</div>
-						      		<div layout-gt-sm="column">
-						      			end time:
+						      		<div layout-gt-xs="column">
         								<div>
-							              <h4 class="md-subhead">Standard time picker</h4>
-							              <mdp-time-picker ng-model="currentDate"></mdp-time-picker>
+							              <h3>To:</h3>
+							              <input type="text" class="endTimeInput" ng-model="endTime" name="start_time" class="timepicker" placeholder="h:mm PM" data-default-time="false">
 							            </div>
 						      		</div>
 						      	</div>
+						      	<md-card-actions layout="row" layout-align="end center">
+			         				 <md-button class="md-raised md-accent" ng-click="getRooms()">Get Rooms</md-button>
+			        			</md-card-actions>
 						      </form>
 			          </md-card-title-text>
 			        </md-card-title>
-			        <md-card-actions layout="row" layout-align="end center">
-			          <md-button class="md-raised md-accent">Get Rooms</md-button>
-			        </md-card-actions>
+			        
 			     </md-card>
 			</div>
        </md-card-title-text>
      </md-card-title>
 </md-card>
+
+<div class="appCard availRooms">
+	<h3>List of available rooms...</h3>
+</div>

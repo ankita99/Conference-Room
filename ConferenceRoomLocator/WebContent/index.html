@@ -17,6 +17,7 @@
 	
 	<!-- Angular Material style sheet -->
 	<link type="text/css" href="css/angular-material.min.css" rel="stylesheet" />
+	<link type="text/css" href="css/mdPickers.min.css" rel="stylesheet" />
 	
 	<link type="text/css" href="css/main.css" rel="stylesheet" />
 	<link type="text/css" href="css/template.css" rel="stylesheet" />
@@ -64,6 +65,7 @@
 	
 	<!-- Angular Material Library -->
 	<script type="application/javascript" src="js/lib/angular-material.min.js"></script>
+	<script type="application/javascript" src="js/lib/mdPickers.min.js"></script>
 	
 <!-- define angular controller -->
 <body ng-controller="mainController">
@@ -92,20 +94,17 @@
         <md-truncate>Conference Room Locator</md-truncate>
 
         <span flex=""></span>
-        <md-button class="md-raised md-accent" aria-label="Learn More">
-          Help
-        </md-button>
-        
+        <h5 class="userInfo">Semicolon User</h5>
+        <a href="#"><span class="glyphicon glyphicon-user"></span></a>
       </div>
+      
     </md-toolbar>
     
     <md-content>
     <md-tabs md-dynamic-height="" md-border-bottom="" md-stretch-tabs >
-      <md-tab ><a href="#/book">Book</a>
+      <md-tab class="appCard"><a href="#/adhoc">Adhoc</a>
       </md-tab>
-      <md-tab ><a href="#/adhoc">Adhoc</a>
-      </md-tab>
-      <md-tab ><a href="#/cancel">Cancel</a>
+      <md-tab class="appCard"><a href="#/book">Book</a>
       </md-tab>
     </md-tabs>
     <div id="content" ng-view flex> </div>
@@ -117,5 +116,13 @@
   	<script type="application/javascript" src="js/controllers/adhocCntrl.js"></script>
   	<script type="application/javascript" src="js/controllers/bookCntrl.js"></script>
   	<script type="application/javascript" src="js/controllers/cancelCntrl.js"></script>
+  	
+  	 <footer>
+        <md-toolbar layout="row"
+                    layout-align="center center">
+            <h6>© 2017 Persistent Systems</h6>
+        </md-toolbar>
+    </footer>
+
 </body>
 </html>

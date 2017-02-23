@@ -1,5 +1,5 @@
 	// create the module and name it scotchApp
-	var conferenceApp = angular.module('conferenceApp', ['ngRoute', 'ngMaterial']);
+	var conferenceApp = angular.module('conferenceApp', ['ngRoute', 'ngMaterial', 'mdPickers']);
 
 	// configure our routes
 	conferenceApp.config(function($routeProvider, $mdThemingProvider) {
@@ -22,6 +22,11 @@
 		    .backgroundPalette('grey', {
 		      'default': '100' // use shade 200 for default, and keep all other shades the same
 		    });
+		  
+		  $mdThemingProvider.theme('altTheme')
+		    .primaryPalette('green'); // specify primary color, all
+		                            // other color intentions will be inherited
+		                            // from default
 		
 		$routeProvider
 
