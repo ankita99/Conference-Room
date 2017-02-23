@@ -67,22 +67,6 @@
 	
 <!-- define angular controller -->
 <body ng-controller="mainController">
-
- <!-- 
- <nav class="navbar navbar-default">
-    <div class="container">
-      <div class="navbar-header">
-        <a class="navbar-brand" href="/">Conference Room Locator</a>
-      </div>
-
-      <ul class="nav navbar-nav navbar-right">
-        <li><a href="#"><i class="fa fa-home"></i> Book</a></li>
-        <li><a href="#cancel"><i class="fa fa-shield"></i> Cancel</a></li>
-        <li><a href="#adhoc"><i class="fa fa-comment"></i> Adhoc</a></li>
-      </ul>
-    </div>
-  </nav>
-  --> 
   
   <md-toolbar class="hue-1">
       <div class="md-toolbar-tools">
@@ -99,7 +83,6 @@
       </div>
     </md-toolbar>
     
-    <md-content>
     <md-tabs md-dynamic-height="" md-border-bottom="" md-stretch-tabs >
       <md-tab ><a href="#/book">Book</a>
       </md-tab>
@@ -109,7 +92,6 @@
       </md-tab>
     </md-tabs>
     <div id="content" ng-view flex> </div>
-  </md-content>
 
   <div id="main"> 
   </div>
