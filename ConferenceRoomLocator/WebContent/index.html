@@ -1,48 +1,48 @@
 <!DOCTYPE html>
 <html ng-app="conferenceApp">
 <head>
-	<meta charset="ISO-8859-1">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Conference Room Locator</title>
-	
-	<!-- Stylesheets -->
-	
-	
-	
-	<link type="text/css" href="css/bootstrap.css" rel="stylesheet" />
-	<link type="text/css" href="css/angular-multi-select.css" rel="stylesheet" />
-	<link type="text/css" href="css/select.css" rel="stylesheet" />
-	<link type="text/css" href="css/timeline.css" rel="stylesheet" />
-	<link type="text/css" href="css/angular-busy.min.css" rel="stylesheet" />
-	
-	<!-- Angular Material style sheet -->
-	<link type="text/css" href="css/angular-material.min.css" rel="stylesheet" />
-	<link type="text/css" href="css/mdPickers.min.css" rel="stylesheet" />
-	
-	<link type="text/css" href="css/main.css" rel="stylesheet" />
-	<link type="text/css" href="css/template.css" rel="stylesheet" />
-	<link type="text/css" href="css/play.css" rel="stylesheet" />
+    <meta charset="ISO-8859-1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Conference Room Locator</title>
+    
+    <!-- Stylesheets -->
+    
+   
+    
+    <link type="text/css" href="css/bootstrap.css" rel="stylesheet" />
+    <link type="text/css" href="css/angular-multi-select.css" rel="stylesheet" />
+    <link type="text/css" href="css/select.css" rel="stylesheet" />
+    <link type="text/css" href="css/timeline.css" rel="stylesheet" />
+    <link type="text/css" href="css/angular-busy.min.css" rel="stylesheet" />
+    
+    <!-- Angular Material style sheet -->
+    <link type="text/css" href="css/angular-material.min.css" rel="stylesheet" />
+    <link type="text/css" href="css/mdPickers.min.css" rel="stylesheet" />
+    
+    <link type="text/css" href="css/main.css" rel="stylesheet" />
+    <link type="text/css" href="css/template.css" rel="stylesheet" />
+    <link type="text/css" href="css/play.css" rel="stylesheet" />
     <link rel="stylesheet" href="css/style.css"/>
     <link rel="stylesheet" href="css/appCSS/index.css"/>
     <link rel="stylesheet" href="css/appCSS/bookRoom.css"/>
-	
-   
-	<!-- External Libraries -->
-	<script type="application/javascript" src="js/lib/jquery.min.js"></script>
-    <script type="application/javascript" src="js/lib/jquery-ui.min.js"></script>
-	<script type="application/javascript" src="js/lib/angular.js"></script>
-	<script type="application/javascript" src="js/lib/angular-ui-router.js"></script>
-	<script type="application/javascript" src="js/lib/angular-resource.js"></script>
-	<script type="application/javascript" src="js/lib/angular-sanitize.js"></script>
-	<script type="application/javascript" src="js/lib/ui-bootstrap-tpls.js"></script>
     
-	<script type="application/javascript" src="js/lib/select.js"></script>
-	<script type="application/javascript" src="js/lib/angular-multi-select.js"></script>
-	<script type="text/javascript" src="js/lib/angular-touch.js"></script>
-	<script type="application/javascript" src="js/lib/angular-dragdrop.min.js"></script>
-	<script type="application/javascript" src="js/lib/angular-file-upload.min.js"></script>
-	<script type="application/javascript" src="js/lib/console-sham.js"></script>
-	<script type="application/javascript" src="js/lib/es5-shim.js"></script>
+   
+    <!-- External Libraries -->
+    <script type="application/javascript" src="js/lib/jquery.min.js"></script>
+    <script type="application/javascript" src="js/lib/jquery-ui.min.js"></script>
+    <script type="application/javascript" src="js/lib/angular.js"></script>
+    <script type="application/javascript" src="js/lib/angular-ui-router.js"></script>
+    <script type="application/javascript" src="js/lib/angular-resource.js"></script>
+    <script type="application/javascript" src="js/lib/angular-sanitize.js"></script>
+    <script type="application/javascript" src="js/lib/ui-bootstrap-tpls.js"></script>
+    
+    <script type="application/javascript" src="js/lib/select.js"></script>
+    <script type="application/javascript" src="js/lib/angular-multi-select.js"></script>
+    <script type="text/javascript" src="js/lib/angular-touch.js"></script>
+    <script type="application/javascript" src="js/lib/angular-dragdrop.min.js"></script>
+    <script type="application/javascript" src="js/lib/angular-file-upload.min.js"></script>
+    <script type="application/javascript" src="js/lib/console-sham.js"></script>
+    <script type="application/javascript" src="js/lib/es5-shim.js"></script>
     <script type="application/javascript" src="js/lib/es5-sham.js"></script>
     <script type="application/javascript" src="js/lib/angular-busy.min.js"></script>
     <script type="application/javascript" src="js/lib/checklist-model.js"></script>
@@ -59,22 +59,22 @@
  </head>
  
  <!-- Angular Material requires Angular.js Libraries -->
-	<script type="application/javascript" src="js/lib/angular-animate.min.js"></script>
-	<script type="application/javascript" src="js/lib/angular-aria.min.js"></script>
-	<script type="application/javascript" src="js/lib/angular-messages.min.js"></script>
-	
-	<!-- Angular Material Library -->
-	<script type="application/javascript" src="js/lib/angular-material.min.js"></script>
-	<script type="application/javascript" src="js/lib/mdPickers.min.js"></script>
-	
+    <script type="application/javascript" src="js/lib/angular-animate.min.js"></script>
+    <script type="application/javascript" src="js/lib/angular-aria.min.js"></script>
+    <script type="application/javascript" src="js/lib/angular-messages.min.js"></script>
+    
+    <!-- Angular Material Library -->
+    <script type="application/javascript" src="js/lib/angular-material.min.js"></script>
+    <script type="application/javascript" src="js/lib/mdPickers.min.js"></script>
+    
 <!-- define angular controller -->
 <body ng-controller="mainController">
-  
+ 
   <md-toolbar class="hue-1">
       <div class="md-toolbar-tools">
       
-		<img class="logo" src="images/Persistent_logo.png">
-		
+        <img class="logo" src="images/Persistent_logo.png">
+        
         <md-truncate>Conference Room Locator</md-truncate>
 
         <span flex=""></span>
@@ -89,22 +89,15 @@
       </md-tab>
       <md-tab class="appCard"><a href="#/book">Book</a>
       </md-tab>
+       <md-tab class="appCard"><a href="#/cancel">Cancel</a>
+      </md-tab>
     </md-tabs>
     <div id="content" ng-view flex> </div>
 
-  <div id="main"> 
-  </div>
-  	<script type="application/javascript" src="js/controllers/mainctrl.js"></script>
-  	<script type="application/javascript" src="js/controllers/adhocCntrl.js"></script>
-  	<script type="application/javascript" src="js/controllers/bookCntrl.js"></script>
-  	<script type="application/javascript" src="js/controllers/cancelCntrl.js"></script>
-  	
-  	 <footer>
-        <md-toolbar layout="row"
-                    layout-align="center center">
-            <h6>© 2017 Persistent Systems</h6>
-        </md-toolbar>
-    </footer>
-
+      <script type="application/javascript" src="js/controllers/mainctrl.js"></script>
+      <script type="application/javascript" src="js/controllers/adhocCntrl.js"></script>
+      <script type="application/javascript" src="js/controllers/bookCntrl.js"></script>
+      <script type="application/javascript" src="js/controllers/cancelCntrl.js"></script>
+      
 </body>
 </html>
