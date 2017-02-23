@@ -1,23 +1,47 @@
-<div class="jumbotron text-center">
-	<h1>Booking Page</h1>
-	
-	<p>{{ message }}</p>
-</div>
 
-<md-card md-theme="blue">
-		        <md-card-title>
-		          <md-card-title-text>
-					<div layout="column" layout-align="center center">
-						<div>
-							<span class="md-headline"><h1 class="md-display-2">Book Meeting</h1></span>
-		            		<span class="md-subhead">Information regarding the available rooms</span>
-							<h4>Opening the calendar </h4>
-							<md-datepicker ng-model="ctrl.myDate" md-placeholder="Enter date" md-open-on-focus=""></md-datepicker>
-						</div>
-					</div>
-		          </md-card-title-text>
-		        </md-card-title>
-		        <md-card-actions layout="row" layout-align="center center">
-		          <md-button>Get Rooms</md-button>
-		        </md-card-actions>
-		      </md-card>
+<md-card md-colors="::{backgroundColor: 'default-accent-100'}">
+     <md-card-title>
+       <md-card-title-text>
+			<div layout="column" layout-align="layout-align-lg">
+				<md-card>
+			        <md-card-title>
+			          <md-card-title-text layout-align="center center">
+						      <form name="userForm">
+						      	<div layout-gt-sm="row">
+						      		<div layout-gt-sm="column">
+						      			<h3>Select date for your meeting:</h5>
+						      		</div>
+						      		<div layout-gt-sm="column">
+						      			<md-input-container>
+						            		<label>Date</label>
+						            		<md-datepicker ng-model="user.submissionDate"></md-datepicker>
+						          		</md-input-container>
+						      		</div>
+						      	</div>
+						      	<div layout-gt-sm="row">
+						      		<div layout-gt-sm="column">
+						      			Start time:
+        								<div>
+							              <h4 class="md-subhead">Standard time picker</h4>
+							              <mdp-time-picker ng-model="currentDate"></mdp-time-picker>
+							            </div>
+						      		</div>
+						      		<div layout-gt-sm="column">
+						      			end time:
+        								<div>
+							              <h4 class="md-subhead">Standard time picker</h4>
+							              <mdp-time-picker ng-model="currentDate"></mdp-time-picker>
+							            </div>
+						      		</div>
+						      	</div>
+						      </form>
+			          </md-card-title-text>
+			        </md-card-title>
+			        <md-card-actions layout="row" layout-align="end center">
+			          <md-button class="md-raised md-accent">Get Rooms</md-button>
+			        </md-card-actions>
+			     </md-card>
+			</div>
+       </md-card-title-text>
+     </md-card-title>
+</md-card>
