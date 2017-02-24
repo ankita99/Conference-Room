@@ -8,6 +8,18 @@ conferenceApp.factory('CalendarFactory', ['$resource', function($resource){
 }]);
 
 
+/*conferenceApp.factory('CalendarFactory', ['$resource', function($resource){
+    return $resource(CONSTANTS.BASEURL+CONSTANTS.CALENDAR_API+"/:roomid",{},{
+        save :{
+            method:'POST',
+            headers: {'Content-Type': undefined},
+			transformResponse:[function(data) {
+                return { response: data };
+            }]
+        }
+    });
+}]);*/
+
 conferenceApp.factory('Status', ['$resource', function($resource){
     return $resource(CONSTANTS.BASEURL+CONSTANTS.STATUS_API);
 }]);
