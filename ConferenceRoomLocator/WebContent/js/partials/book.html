@@ -49,6 +49,16 @@
      </md-card-title>
 </md-card>
 
-<div class="appCard availRooms">
-	<h3>List of available rooms...</h3>
+<div ng-if="showRooms" ng-init='status=1'>
+	<md-card class="appcard">
+		<md-card-header-text md-colors="::{backgroundColor: 'default-primary-700'}">
+			<h3 class="md-title">Available rooms</h3>
+		</md-card-header-text>
+		<md-card-actions layout="row" layout-align="start center">
+			<div class="boxWidth" ng-repeat="room in rooms">
+				<div ng-class="{1:'green', 0:'red'}[status]" ><h4 style="padding: 10px;">{{room}}</h4></div>
+				<div id="bookBtn"><md-button class="md-raised" md-colors="::{backgroundColor: 'default-background-300'}">Book</md-button></div>
+			</div>
+		</md-card-actions>
+	</md-card>    
 </div>
