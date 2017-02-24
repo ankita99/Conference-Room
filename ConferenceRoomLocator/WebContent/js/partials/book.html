@@ -1,5 +1,5 @@
 
-<md-card class="appCard"md-colors="::{backgroundColor: 'default-primary-50'}">
+<md-card class="appCard">
      <md-card-title>
        <md-card-title-text>
 			<div layout="column"" layout-align="center center">
@@ -25,14 +25,14 @@
 						      		<div layout-gt-sm="column">
         								<div>
 							              <h3>From:</h3>
-							              <input type="text" class="startTimeInput" ng-model="startTime" name="start_time" class="timepicker" placeholder="h:mm PM" data-default-time="false">
+							              <input type="text" class="startTimeInput" ng-model="startTime" name="start_time" class="timepicker" placeholder="hh:mm PM" data-default-time="false">
 							              
 							            </div>
 						      		</div>
 						      		<div layout-gt-xs="column">
         								<div>
 							              <h3>To:</h3>
-							              <input type="text" class="endTimeInput" ng-model="endTime" name="start_time" class="timepicker" placeholder="h:mm PM" data-default-time="false">
+							              <input type="text" ng-value="startTime" class="endTimeInput" ng-model="endTime" name="start_time" class="timepicker" placeholder="hh:mm PM" data-default-time="false">
 							            </div>
 						      		</div>
 						      	</div>
@@ -54,7 +54,7 @@
 		<md-card-header-text md-colors="::{backgroundColor: 'default-primary-700'}">
 			<h3 class="md-title">Available rooms</h3>
 		</md-card-header-text>
-		<md-card-actions layout="row" layout-align="start center">
+		<md-card-actions layout="row" layout-align="start center" flex style="overflow: scroll;">
 			<div class="boxWidth" ng-repeat="room in rooms">
 				<div ng-class="{1:'green', 0:'red'}[status]" ><h4 style="padding: 10px;">{{room}}</h4></div>
 				<div id="bookBtn"><md-button class="md-raised" md-colors="::{backgroundColor: 'default-background-300'}">Book</md-button></div>

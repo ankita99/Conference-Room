@@ -254,6 +254,12 @@
 
 .boxWidth{
 	width: 100px;
+	min-height: 200px;
+}
+
+.roomContainer{
+	min-height: 200px;
+	width: 900px;
 }
 
 #bookBtn{

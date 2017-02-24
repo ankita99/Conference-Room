@@ -16,4 +16,11 @@ conferenceApp.controller('bookController', ['$scope', '$mdpTimePicker', function
 	  $scope.showRooms = true;
   };
   
+  $scope.updateEndTme = function(){
+	  var start = [];
+	  start = $scope.startTime.split(":");
+	  start[1] += 30;
+	  $scope.endTime = start[0] + ":" + start[1];
+	  
+  };
 }]);
