@@ -32,8 +32,8 @@
 
 			// route for the home page
 			.when('/', {
-				templateUrl : 'js/partials/book.html',
-				controller  : 'bookController'
+				templateUrl : 'js/partials/adhoc.html',
+				controller  : 'adhocController'
 			})
 			.when('/book', {
 				templateUrl : 'js/partials/book.html',
