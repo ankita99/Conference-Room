@@ -1,8 +1,8 @@
-conferenceApp.controller('adhocController', ['$scope','$state','$location','$window','$http','$timeout','Status', '$interval', function($scope, $state, $location, $window, $http, $timeout, Status, $interval) {
+conferenceApp.controller('adhocController', ['$scope','$state','$location','$window','$http','$timeout','Status', '$interval','Customer', function($scope, $state, $location, $window, $http, $timeout, Status, $interval,Customer) {
 	$scope.message = 'adhoc controller called.';
 	
 	$scope.rooms=["Pushya","Revati","Anurdha","Rohini","Kritika","Ashwini"];
-	
+	$scope.CustData={};
 	$scope.CurrentDate = new Date();
 	var update = function() {
 		$scope.CurrentDate = new Date();
@@ -41,6 +41,16 @@ $scope.roomList={  "roomStatus":[
 
 	};
 	
+	$scope.getCust = function(){
+		var customersData = Customer.query(function(){
+			$scope.CustData = customersData;
+		},function(error){
+			console.log('Error in retrieving rooms data '+error.data);
+		});
+
+	};
+	
+	$scope.getCust();
 	$scope.startTimer = function(){
 		var c = 119;
 		$scope.timer = $interval(function(){

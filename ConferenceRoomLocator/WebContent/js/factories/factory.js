@@ -12,3 +12,7 @@ conferenceApp.factory('Status', ['$resource', function($resource){
     return $resource(CONSTANTS.BASEURL+CONSTANTS.STATUS_API);
 }]);
 
+conferenceApp.factory('Customer', ['$resource', function($resource){
+    return $resource(CONSTANTS.BASEURL+CONSTANTS.CUST_API);
+}]);
+
