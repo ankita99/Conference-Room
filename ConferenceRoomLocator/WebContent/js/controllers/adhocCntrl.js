@@ -52,12 +52,12 @@ $scope.roomList={  "roomStatus":[
 	
 	$scope.getCust();
 	$scope.startTimer = function(){
-		var c = 119;
+		var c = 89;
 		$scope.timer = $interval(function(){
 			$scope.timer = "Refreshing in : "+c;
 			c--;
 			if (c == 0) {
-				c=119;
+				c=89;
 				//$scope.getRooms();	
 				$scope.timer = "Refreshing Page";
 			};
