@@ -22,7 +22,7 @@ padding-left: 160px;
 padding-right: 160px;
 }
 
-.redroom {
+.booked {
   position: relative;
   float: left;
   width: 90px;
@@ -36,7 +36,7 @@ padding-right: 160px;
   transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
 }
 
-.redroom::after {
+.booked::after {
   content: "";
   border-radius: 5px;
   position: absolute;
@@ -51,16 +51,16 @@ padding-right: 160px;
   transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
 }
 
-.redroom:hover {
+.booked:hover {
   -webkit-transform: scale(1.25, 1.25);
   transform: scale(1.25, 1.25);
 }
 
-.redroom:hover::after {
+.booked:hover::after {
     opacity: 1;
 }
 
-.yellowroom {
+.BNO {
   position: relative;
   float: left;
   width: 90px;
@@ -74,7 +74,7 @@ padding-right: 160px;
   transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
 }
 
-.yellowroom::after {
+.BNO::after {
   content: "";
   border-radius: 5px;
   position: absolute;
@@ -89,16 +89,16 @@ padding-right: 160px;
   transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
 }
 
-.yellowroom:hover {
+.BNO:hover {
   -webkit-transform: scale(1.25, 1.25);
   transform: scale(1.25, 1.25);
 }
 
-.yellowroom:hover::after {
+.BNO:hover::after {
     opacity: 1;
 }
 
-.greenroom {
+.available {
   position: relative;
   float: left;
   width: 90px;
@@ -112,7 +112,7 @@ padding-right: 160px;
   transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
 }
 
-.greenroom::after {
+.available::after {
   content: "";
   border-radius: 5px;
   position: absolute;
@@ -127,16 +127,16 @@ padding-right: 160px;
   transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
 }
 
-.greenroom:hover {
+.available:hover {
   -webkit-transform: scale(1.25, 1.25);
   transform: scale(1.25, 1.25);
 }
 
-.greenroom:hover::after {
+.available:hover::after {
     opacity: 1;
 }
 
-.violetroom {
+.FBO {
   position: relative;
   float: left;
   width: 90px;
@@ -150,7 +150,7 @@ padding-right: 160px;
   transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
 }
 
-.violetroom::after {
+.FBO::after {
   content: "";
   border-radius: 5px;
   position: absolute;
@@ -165,12 +165,12 @@ padding-right: 160px;
   transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
 }
 
-.violetroom:hover {
+.FBO:hover {
   -webkit-transform: scale(1.25, 1.25);
   transform: scale(1.25, 1.25);
 }
 
-.violetroom:hover::after {
+.FBO:hover::after {
     opacity: 1;
 }
 

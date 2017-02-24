@@ -8,14 +8,10 @@
 
 <div class="container ng-scope">
 <div class="col-md-6"><label>Current Time: {{CurrentDate | date:'HH:mm:ss'}}</label></div>
-<div style="text-align: right;" class="col-md-6"><label>Refreshing in:</label></div>
+<div style="text-align: right;" class="col-md-6"><label>{{timer}}</label></div>
 </div>
-
-<div class="boxcontainer" ng-repeat="room in rooms">
-<div class="box" ><h4 style="padding: 10px;">{{room}}</h4></div><!-- 
-<div class="redroom" ><h4 style="padding: 10px;">{{room}}</h4></div>
-<div class="yellowroom" ><h4 style="padding: 10px;">{{room}}</h4></div>
-<div class="violetroom" ><h4 style="padding: 10px;">{{room}}</h4></div> -->
+<div class="boxcontainer" ng-repeat="room in roomList.roomStatus">
+<div ng-class="room.status"><h4 style="padding: 10px;">{{room.name}}</h4></div>
 </div>
 
 <div class="container">
