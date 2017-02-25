@@ -1,11 +1,7 @@
 conferenceApp.controller('bookController', ['$scope', '$mdpTimePicker', function($scope, $mdpTimePicker) {
 	$scope.message = 'Everyone come and book a room';
-  this.myDate = new Date();
-  this.isOpen = false;
-  
-  $scope.mytime = new Date();
-  
-  console.log($scope.startTime);
+	
+	$scope.rooms=["Pushya","Revati","Anurdha","Rohini","Kritika","Ashwini"];
 
   this.showTimePicker = function(ev) {
   	$mdpTimePicker($scope.currentTime, {
@@ -17,9 +13,14 @@ conferenceApp.controller('bookController', ['$scope', '$mdpTimePicker', function
   };
   
   $scope.getRooms = function(){
-	  console.log($scope.meetingDate);
-	  console.log($scope.startTime);
-	  console.log($scope.endTime);
+	  $scope.showRooms = true;
   };
   
+  $scope.updateEndTme = function(){
+	  var start = [];
+	  start = $scope.startTime.split(":");
+	  start[1] += 30;
+	  $scope.endTime = start[0] + ":" + start[1];
+	  
+  };
 }]);
